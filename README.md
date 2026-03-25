@@ -4,9 +4,9 @@
 
 ## The Problem
 
-As a university student, I found myself spending way too much time trying to understand long, complicated lecture notes. Sometimes the notes are full of technical terms, dense paragraphs, or just written in a way that is hard to follow — especially when you are revising the night before an exam.
+As a university student, I found myself spending way too much time trying to understand long, complicated lecture notes. Sometimes the notes are full of technical terms, dense paragraphs, or just written in a way that is hard to follow especially when you are revising the night before an exam and I belive many student face this issues when exams are so near and they need to complete chapters and revise when exam hits.
 
-A lot of students deal with this. You copy down notes in class, or download a lecture PDF, and then later you sit there reading the same paragraph three times trying to figure out what it actually means. It slows down your study time and makes revision stressful.
+A lot of students deal with this. We copy down notes in class, or download a lecture PDF, and then later you sit there reading the same paragraph three times trying to figure out what it actually means. It slows down your study time and makes revision stressful.
 
 I wanted a simple tool that could take those confusing notes and just explain them in plain English — without changing what they mean.
 
@@ -16,7 +16,7 @@ I wanted a simple tool that could take those confusing notes and just explain th
 
 AI Note Simplifier is a web app where you paste your notes, click a button, and get back a simpler, easier-to-understand version of the same content.
 
-It uses the OpenAI API in the background to rewrite your notes into clear, everyday English. The key idea is that it does not add new information or make things up — it just takes what you wrote and explains it more simply. That way you are not learning something wrong, you are just reading it in a way that is easier to understand.
+It uses the OpenAI API in the background to rewrite your notes into clear, everyday English. The key idea is that it does not add new information or make things up, it just takes what you wrote and explains it more simply. That way you are not learning something wrong, you are just reading it in a way that is easier to understand.
 
 ---
 
