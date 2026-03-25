@@ -1,6 +1,101 @@
 # AI Note Simplifier
 
-A simple Flask web app that simplifies university notes into plain, easy English using the OpenAI API.
+---
+
+## The Problem
+
+As a university student, I found myself spending way too much time trying to understand long, complicated lecture notes. Sometimes the notes are full of technical terms, dense paragraphs, or just written in a way that is hard to follow — especially when you are revising the night before an exam.
+
+A lot of students deal with this. You copy down notes in class, or download a lecture PDF, and then later you sit there reading the same paragraph three times trying to figure out what it actually means. It slows down your study time and makes revision stressful.
+
+I wanted a simple tool that could take those confusing notes and just explain them in plain English — without changing what they mean.
+
+---
+
+## The Solution
+
+AI Note Simplifier is a web app where you paste your notes, click a button, and get back a simpler, easier-to-understand version of the same content.
+
+It uses the OpenAI API in the background to rewrite your notes into clear, everyday English. The key idea is that it does not add new information or make things up — it just takes what you wrote and explains it more simply. That way you are not learning something wrong, you are just reading it in a way that is easier to understand.
+
+---
+
+## How the Application Works
+
+Using the app is straightforward:
+
+1. **Open the app** in your browser
+2. **Paste your notes** into the large text box on the page
+3. **Click the "Simplify Notes" button**
+4. The app sends your notes to the OpenAI API with instructions to simplify the language
+5. **The simplified version appears** on the same page below the button
+6. If you leave the text box empty and click the button, the app shows an error message asking you to enter something first
+
+The whole process takes a few seconds. You get back the same information, just written in a way that is much easier to read and understand.
+
+---
+
+## Technologies Used
+
+- **Python** — the main programming language used for the backend
+- **Flask** — a lightweight Python web framework used to build and run the app
+- **HTML** — used to build the structure of the web page
+- **CSS** — used to style the page and make it look clean and simple
+- **OpenAI API** — used to process the notes and return a simplified version
+- **python-dotenv** — used to securely load the API key from a `.env` file
+
+---
+
+## Features
+
+- Paste any notes and get a simplified version in seconds
+- Clean and simple interface that is easy to use
+- Keeps the original meaning of the notes — does not add or remove important information
+- Shows an error message if the text box is left empty
+- Your notes stay in the text box after you click the button so you can compare both versions
+- API key is stored securely and never uploaded to GitHub
+
+---
+
+## How to Run the Application
+
+Follow these steps to run the app on your own computer:
+
+**1. Clone or download the project**
+```bash
+git clone https://github.com/HasanurForaize/ai-note-simplifier.git
+cd ai-note-simplifier
+```
+
+**2. Create and activate a virtual environment**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**3. Install the required packages**
+```bash
+pip install -r requirements.txt
+```
+
+**4. Add your OpenAI API key**
+
+Create a file called `.env` in the project folder and add this line:
+```
+OPENAI_API_KEY=your_api_key_here
+```
+You can get a free API key from https://platform.openai.com/api-keys
+
+**5. Run the app**
+```bash
+python app.py
+```
+
+**6. Open in your browser**
+
+Go to: `http://127.0.0.1:5000`
+
+The app should now be running and ready to use.
 
 ---
 
@@ -11,126 +106,14 @@ ai-note-simplifier/
 ├── app.py               ← Flask backend
 ├── templates/
 │   └── index.html       ← Frontend (HTML + CSS)
-├── requirements.txt     ← Python dependencies
-├── .env.example         ← Template for your API key
-├── .gitignore           ← Files to exclude from GitHub
+├── requirements.txt     ← List of dependencies
+├── .env.example         ← Template for the API key
+├── .gitignore           ← Stops .env from being uploaded
 └── README.md            ← This file
 ```
 
 ---
 
-## Part 1 — Run Locally
+## Notes
 
-### Step 1 — Make sure Python is installed
-Open Terminal and run:
-```bash
-python3 --version
-```
-You should see Python 3.x. If not, download it from https://python.org
-
----
-
-### Step 2 — Open the project folder in Terminal
-```bash
-cd Desktop/ai-note-simplifier
-```
-
----
-
-### Step 3 — Create a virtual environment
-```bash
-python3 -m venv venv
-```
-
-Activate it:
-- **Mac / Linux:**
-  ```bash
-  source venv/bin/activate
-  ```
-- **Windows:**
-  ```bash
-  venv\Scripts\activate
-  ```
-
----
-
-### Step 4 — Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
----
-
-### Step 5 — Add your OpenAI API key
-
-1. Copy `.env.example` and rename the copy to `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-2. Open `.env` in any text editor and replace `your_openai_api_key_here` with your real key:
-   ```
-   OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
-   ```
-
-You can get an API key at: https://platform.openai.com/api-keys
-
----
-
-### Step 6 — Run the app
-```bash
-python app.py
-```
-
-Open your browser and go to: **http://127.0.0.1:5000**
-
----
-
-## Part 2 — Upload to GitHub
-
-### Step 1 — Create a new repository on GitHub
-1. Go to https://github.com and log in.
-2. Click the **+** button → **New repository**.
-3. Name it `ai-note-simplifier`.
-4. Leave it **Public** (or Private if your professor allows it).
-5. Do **NOT** tick "Add a README" — you already have one.
-6. Click **Create repository**.
-
----
-
-### Step 2 — Push your code from Terminal
-
-Run these commands one by one inside your project folder:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit - AI Note Simplifier"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/ai-note-simplifier.git
-git push -u origin main
-```
-
-Replace `YOUR_USERNAME` with your actual GitHub username.
-
-> Your `.env` file is listed in `.gitignore` so it will NOT be uploaded. Your API key stays private.
-
----
-
-## Part 3 — Submit on Brightspace
-
-1. Copy your GitHub repository link, e.g.:
-   `https://github.com/YOUR_USERNAME/ai-note-simplifier`
-2. Log in to Brightspace.
-3. Go to your assignment submission page.
-4. Paste the GitHub link in the text field.
-5. Click **Submit**.
-
----
-
-## Technologies Used
-
-- Python 3
-- Flask
-- OpenAI API (gpt-3.5-turbo)
-- HTML / CSS
-- python-dotenv
+This project was built as part of a university assignment. It is a beginner-level web app and intentionally kept simple. The goal was to build something useful and functional without overcomplicating it.
