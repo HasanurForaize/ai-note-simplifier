@@ -113,7 +113,3 @@ ai-note-simplifier/
 ```
 
 ---
-
-## Notes
-
-This project was built as part of a university assignment. It is a beginner-level web app and intentionally kept simple. The goal was to build something useful and functional without overcomplicating it.
